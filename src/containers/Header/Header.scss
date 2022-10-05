@@ -1,0 +1,183 @@
+#home{
+    position: relative;
+    background-image: linear-gradient(to bottom, #cfb7bd, #bb9fa6, #a8888f, #957178, #825b62, #825b62, #825b62, #825b62, #957178, #a8888f, #bb9fa6, #cfb7bd);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    padding-top: 100px;
+    height: 100Vh;
+    .app__wrapper{
+        margin: 0;
+    }
+   
+}
+
+.app__header{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 2000px) {
+        padding-top: 6rem;        
+    }
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+    }
+    @media screen and (max-width: 450px){
+        padding: 0.2rem 1rem;
+    }
+}
+
+.app__header-circles{
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1rem;
+    div{ 
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--white-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        width: 75px;
+        height: 75px;
+        img{
+            width: 40%;
+            height: 40%;
+        }
+    }
+    div:nth-child(1) {
+        margin-left: 2rem;
+    }
+    div:nth-child(2) {
+        margin-left: 10rem;
+    }
+    div:nth-child(3) {
+        margin-left: 2rem;
+    }
+    div:nth-child(4) {
+        margin-left: 10rem;       
+    }
+    div:nth-child(5) {
+        margin-left: 2rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        z-index: 1;
+        div{
+            margin: 1rem;
+            img{
+                width: 30%;
+                height: 30%;
+            }
+        }
+            div:nth-child(1) {
+                margin-left: 0rem;
+            }
+            
+            div:nth-child(2) {
+                margin-left: 0rem;
+            }
+            
+            div:nth-child(3) {
+                margin-left: 0rem;
+            }
+            
+            div:nth-child(4) {
+                margin-left: 0rem;
+            }
+            
+            div:nth-child(5) {
+                margin-left: 0rem;
+            }
+
+    }
+    @media screen and (min-width: 2000px) {
+        div {    
+            width: 150px;
+            height: 150px;
+            img {
+                width: 40%;
+                height: 40%;
+            }
+        }
+    }
+}
+
+.app__header-img{
+    flex: 1;
+    height: 100%;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:0%;
+    div{
+        height: 400px;
+        width: 400px;
+        position: relative;
+        object-fit: contain;
+    }
+    img{
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+        position: absolute;
+        border-radius: 50%;
+        border: var(--white-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        left: 0;
+        top: 0;
+        transition: opacity 1s ease-in-out;
+        
+    }
+    .overlay_circle{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    @media screen and (max-width: 1200px){
+        width: 70%;
+        opacity: 0.3;
+        div{
+            height: 200px;
+            width: 200px;
+        }
+        img{
+            left: 0;
+            width: 100%;
+            top: 0rem;
+            margin: 0rem;
+            opacity: 0.5;
+            z-index: 0;
+        }
+        .overlay_circle{
+            z-index: 0;
+            left: 0;
+        }
+        
+    }
+    @media screen and (min-width: 2000px) {
+        div{
+            height: 600px;
+            width: 600px;
+        }
+
+    }
+
+}
